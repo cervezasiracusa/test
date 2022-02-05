@@ -33,8 +33,9 @@ $(document).ready(function(){
   let whiteSection =  document.getElementsByClassName("white-section");
   let whiteSection1 = $(whiteSection[0]).offset().top;
   let whiteSection2 = $(whiteSection[1]).offset().top;
+  let manoIndicadora = document.getElementsByClassName("mano-indicadora");
 
-  console.log(whiteSection1+" * "+whiteSection2);
+  // console.log(whiteSection1+" * "+whiteSection2);
 
   // let indexSection= 0;
 
@@ -197,11 +198,17 @@ screenWidthControl();
       for (let index = 0; index < fondoOscuro.length; index++) {
         fondoOscuro[index].style.opacity = 1;
       }
+      for (let index = 0; index < manoIndicadora.length; index++) {
+        manoIndicadora[index].style.opacity = 0;
+      }
     });
 
     $(".seccion-derecha-variedad").mouseleave(function(){
       for (let index = 0; index < fondoOscuro.length; index++) {
         fondoOscuro[index].style.opacity = 0;
+      }
+      for (let index = 0; index < manoIndicadora.length; index++) {
+        manoIndicadora[index].style.opacity = 1;
       }
     });
 
@@ -415,7 +422,7 @@ screenWidthControl();
         if (($(window).scrollTop() < ($(window).height()-100)) ) { //section active is HOME
           logo[0].style.width= "70%"; 
           completeMenu[0].style.left = "calc(50% - 1.7rem)";
-          completeMenu[0].style.top = "27%";
+          completeMenu[0].style.top = "33%";
           completeMenu[0].style.width =  "2.5rem";    //"100%";
           completeMenu[0].style.height =  "max-content";
           ulMenu.style.width = "30vw";
