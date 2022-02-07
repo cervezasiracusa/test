@@ -5,6 +5,12 @@ $(document).ready(function(){
   //     requestAnimationFrame(update3);
   // });
 
+  // let word1 = document.getElementById('word1');
+  // let word2 = document.getElementById('word2');
+  // let texto = document.getElementsByClassName('textpPresentacion');
+  // let texto2 = document.getElementsByClassName('textpPresentacion2');
+  let logoPresentacion = document.getElementById('logo-presentacion-2');
+
   let word1 = document.getElementById('word1');
   let word2 = document.getElementById('word2');
   let texto = document.getElementsByClassName('textpPresentacion');
@@ -84,9 +90,11 @@ $(document).ready(function(){
 //   requestAnimationFrame(update3);
 // }
 
-screenWidthControl(); 
+// screenWidthControl(); 
     presentacion();
+    presentacion2();
     setInterval(presentacion, 10000);
+    setInterval(presentacion2, 10000);
 
     window.addEventListener('scroll', function()  { resizeLogo(); });
 
@@ -327,6 +335,79 @@ screenWidthControl();
       // presentacionInversa();
     }
 
+    function presentacion2() {
+      // logo central se achica
+      // for (let index = 80; index > 25; index--) {
+      //   logoPresentacion.style.width = index+"%";
+      //   logoPresentacion.animate(
+      //     [
+      //       { transform: "translateX(0)" },
+      //       { transform: "translateX(0)" },
+      //     ],
+      //     { duration: 1000 } ); 
+      // };
+      // logoPresentacion.animate(
+      //   [
+      //     { transform: "translateX(300px)" },
+      //     { transform: "translateX(0)" },
+      //   ],
+      //   { duration: 1000 }
+      // ); //iterations: Infinity
+      // logo sale desde el centro
+      // logoPresentacion.animate(
+      //   [
+      //     { transform: "translateX(300px)" },
+      //     { transform: "translateX(0)" },
+      //   ],
+      //   { duration: 1000 }
+      // ); //iterations: Infinity
+       
+      // //salir de Izq
+      for (let index = 0; index < texto.length; index++) {
+        texto[index].style.opacity = 1;
+
+        texto[index].animate(
+          [
+            { transform: "translateX(-800px)" },
+            { transform: "translateX(0)" },
+          ],
+          { duration: 1000 + index * 1000 }
+        ); //iterations: Infinity
+      }
+      // //salir de Dre
+      for (let index = 0; index < texto2.length; index++) {
+        texto2[index].style.opacity = 1;
+
+        texto2[index].animate(
+          [
+            { transform: "translateX(400px)" },
+            { transform: "translateX(00)" },
+          ],
+          { duration: 1000 + index * 1000 }
+        );
+      }
+      //subirElemento
+      word1.style.opacity = 1;
+      word2.style.opacity = 1;
+
+      word1.animate(
+        [
+          { transform: "translateX(400px)" },
+          { transform: "translateX(0)" },
+        ],
+        { duration: 1000 + 3 * 1000 }
+      );
+      word2.animate(
+        [
+          { transform: "translateX(-600px)" },
+          { transform: "translateX(0)" },
+        ],
+        { duration: 1000 + 4 * 1000 }
+      );
+      // presentacionInversa();
+    }
+
+
     function presentacionInversa() {
       // //volver a Izq
       for (let index = 0; index < texto.length; index++) {
@@ -419,8 +500,8 @@ screenWidthControl();
 
       pageWidth  = document.documentElement.clientWidth ;
       if (pageWidth > 1400) {
-        if (($(window).scrollTop() < ($(window).height()-100)) ) { //section active is HOME
-          logo[0].style.width= "70%"; 
+        if (($(window).scrollTop() < -1000) ) { //section active is HOME  ---  ($(window).height()-100)
+          // logo[0].style.width= "70%"; 
           completeMenu[0].style.left = "calc(50% - 1.7rem)";
           completeMenu[0].style.top = "33%";
           completeMenu[0].style.width =  "2.5rem";    //"100%";
@@ -430,7 +511,7 @@ screenWidthControl();
           central[0].style.backgroundColor = "transparent";
           redes.style.display = 'block';
         }else{                                 //section active is NOT HOME
-          logo[0].style.width= "50%";
+          // logo[0].style.width= "50%";
           completeMenu[0].style.left = "10px";
           completeMenu[0].style.top = "10px";
           completeMenu[0].style.width = "100%";
@@ -441,7 +522,7 @@ screenWidthControl();
           redes.style.display = 'none';
         }
        }else{
-        screenWidthControl()
+        // screenWidthControl()
        }
     };
 

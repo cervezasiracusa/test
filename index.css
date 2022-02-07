@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +7,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Abel;
 }
 
 .general-container {
@@ -58,6 +60,25 @@ ul li {
   flex-direction: column;
   z-index: 150000;
 }
+#logo-presentacion-2 {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  /* float: left; */
+  left: 50%;
+  top: 65%;
+  margin-left: -20%;
+  margin-top: -25%;
+  /* border: #fff solid 10px; */
+  z-index: -1;
+  /* align-self: center; */
+}
+#logo-presentacion-2 img {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+  /* object-fit: fill; */
+}
 /* .logo {
   position: relative;
   border: white 12px solid;
@@ -88,8 +109,7 @@ ul li {
 
 
 .top,
-#section-empresa,
-#section-historia,
+#section-nosotros,
 #section-proceso,
 #section-variedades,
 #section-contacto,
@@ -108,16 +128,15 @@ ul li {
   display: flex;
   flex-wrap: wrap;
 }
-#section-contacto{
-  min-height: max-content;
-  padding-bottom: 2rem;
-}
-#section-empresa,
-#section-historia,
+#section-nosotros,
 #section-variedades
 {
-  background-image: linear-gradient( to top, rgba(180, 89, 3, 0.5),  rgba(180, 89, 3, 0.85));
+  /* background-image: linear-gradient( to top, rgba(180, 89, 3, 0.5),  rgba(180, 89, 3, 0.85)); // 177, 130, 58 --- 185, 138, 68--158, 101, 30*/
+  background-image: linear-gradient( to left, rgba(185,138, 68, 0.99), rgba(158, 101, 30, 0.99));
 }
+/* #section-nosotros{
+  max-width: 100%;
+} */
 /* #section-apa, #section-ipa,
 #section-stout,
 #section-golden,
@@ -163,6 +182,8 @@ ul li {
 }
 #section-contacto {
   background-image: url("img/fondo-lupulo.jpg");
+  min-height: max-content;
+  padding-bottom: 2rem;
 }
 #section-proceso {
   background-image: url("img/foto-lupulo2_1920.jpg");
@@ -182,16 +203,22 @@ ul li {
     transition-duration: .5s;
     z-index: 2;
 }
-#section-contacto .fondo-oscuro {
-  background: rgba(5, 5, 5, 0.4);
+#section-contacto .fondo-oscuro {  /* oscurece el background de la seccion contacto*/
+  background: rgba(0, 0, 0, 0.1);
   opacity: 1;
-  z-index: 1;
+  z-index: 3;
 }
-#presentacion {
+
+#presentacion, #presentacion2 {
   float: left;
-  background: url("img/gif/beer-10-lento.gif") no-repeat;
+  background: url("img/gif/pexels-cottonbro2048x1080.gif") no-repeat;
+  /* background: url("img/gif/beer-10-lento.gif") no-repeat; */
+  /* background: url("img/gif/cerveza-siracusa-presentacion.gif"); */
+  /* background: url("img/gif/fondo-cerveza3.gif") repeat; */
+  /* background: url("img/yacanto1.jpg") no-repeat; */
   /* background: url("img/camello-con-piramide2.png") no-repeat; */
   background-size: cover;
+  background-position: center center;
     /* background-image: linear-gradient(to right, rgba(180,89,3,0.5), rgba(180, 89, 3, 0.85)); */
   /* background-image: linear-gradient(to bottom, rgba(252, 194, 6, 0.5), rgba(252, 194, 6, 0.85)); */
   position: relative;
@@ -199,14 +226,20 @@ ul li {
   padding: 0;
   transition: all 0.7s;
   text-align: center;
-  width: 50%;
+  width: 100%;
+  max-width: 100vw;
   /* min-width: max-content; */
   height: 100vh;
   min-height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   /* overflow: visible; */
 }
+/* #presentacion2 {
+  padding: 15%;
+} */
 
 .section-empresa {
   position: absolute;
@@ -243,6 +276,24 @@ ul li {
   /* border: red solid 3px; */
   z-index: 100;
 }
+.recuadros2 {
+  position: relative;
+  float: left;
+  width: 100%;
+  /* max-width: max-content; */
+  /* min-width: max-content; */
+  /* margin-left: -10%; */
+  /* margin-right: auto; */
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: space-between;
+  /* border: red solid 3px; */
+  z-index: 100;
+  padding-right: 5%;
+  padding-left: 10%;
+}
+
 .textpPresentacion2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -269,6 +320,22 @@ ul li {
   margin-top: 10%;
   left: 0%;
 }
+.dos {
+  font-family: Dosis;
+  font-size: 2.7rem;
+  font-weight: 800;
+  line-height: 5rem;
+  text-shadow: 0 0 8px  rgba(0, 0, 0, 0.99);
+
+  /* text-shadow: 0 0 10px  rgba(0, 0, 0, 0.8); */
+}
+.sombra{
+  font-size: 2.7rem;
+  font-weight:900;
+  line-height: 5rem;
+  
+  text-shadow: 0 0 2px  rgba(255, 255, 255, 1);
+}
 #begin {
   float: left;
   margin-left: 0%;
@@ -293,6 +360,17 @@ ul li {
   align-self: center;
   /* right: 100%; */
   margin-left: -15%;
+  /* border: blue 3px solid; */
+}
+#begin2-2 {
+  float: left;
+  text-align: left;
+  line-height: 4rem;
+  align-self: flex-end;
+  width: max-content;
+  margin-left: 10%;
+  /* right: 100%; */
+  /* margin-left: 5%; */
   /* border: blue 3px solid; */
 }
 #begin3 {
@@ -329,17 +407,29 @@ ul li {
   /* right: 100%; */
   margin-left: -5%;
 }
-
+#word1, #word2, .word1-2, .word2-2, .word11, .word22 {
+  font-family: Dosis;
+}
 #word1 {
-  font-size: 4rem;
+  /* font-size: 4rem; */
   font-weight: bold;
   letter-spacing: 1rem;
   color: #fff;
   opacity: 0;
   left: -500px;
 }
+.word1-2, .word2-2 {
+  font-size: 3rem;
+  font-weight: lighter;
+  text-shadow: 0px 0px 2px  rgba(0, 0, 0, 0.99);
+  line-height: 4rem;
+}
+.word2-2 {
+  font-size: 4.3rem;
+  /* text-shadow: 0 0 10px  rgba(0, 0, 0, 0.5); */
+}
 #word2 {
-  font-size: 5rem;
+  /* font-size: 5rem; */
   font-weight: 900;
   letter-spacing: normal;
   color: #fff;
@@ -481,10 +571,11 @@ ul li {
     }
 }
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: green;
-  padding-bottom: 2rem;
-  letter-spacing: -0.1rem;
+  padding-bottom: 3.2rem;
+  /* letter-spacing: -0.1rem; */
+  font-family: Bebas Neue;
 }
 .contenidoCerveza {
     width: 100%;
@@ -497,7 +588,7 @@ h3 {
     transition-duration: .5s;
     background: white; /*rgb(250, 250, 250); */
     color: black;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -541,8 +632,10 @@ h3 {
     flex-direction: column; */
   width: 2.5rem;
   height: max-content;
-  top: 33%;
-  left: calc(50% - 1.7rem);
+  /* top: 33%;
+  left: calc(50% - 1.7rem); */
+  top: 10px;
+  left: 10px;
   /* border: red 3px solid;  */
   overflow: visible;
   text-align: left;
@@ -588,24 +681,27 @@ h3 {
 .contact-icon {
     width: max-content;
     font-size: 2.2rem;
-    color: yellow;
+    color: rgba(247, 215, 34, 0.95); /*yellow;*/
     /* cursor: pointer; */
     padding: 0;
     margin: 1rem;
 }
 .contenido-contacto {
   width: 100%;
-  height: max-content;
+  height: 60vh;
+  min-height: max-content;
+  max-height: max-content;
   margin-top: 12%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   /* z-index: 10000; */
 }
 #redes-contacto {
   float: left;
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -629,19 +725,7 @@ h3 {
   text-align: left;
   z-index: 10000;
 }
-#maps {
-  z-index: 10000;
-  float: left;
-  width: 50%;
-  height: 550px;
-  padding: 2%;
-  border: 0;
-  /* width="600" height="400" style="border:0;" */
-}
-#maps iframe {
-  width: 100%;
-  height: 100%;
-}
+
 footer {
   position: relative;
   float: left;
@@ -694,7 +778,7 @@ footer a {
   background: rgba(5, 5, 5, 0.5);
 }
 #ulMenu li:hover {
-  color: yellow;
+  color: rgba(250, 214, 10, 0.950); /*yellow;*/
 }
 #ulMenu li a {
   margin: 0.5 1rem;
@@ -730,13 +814,14 @@ footer a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("img/siracusa2.jpg") no-repeat bottom;
+  background: url("img/variedades.jpeg") no-repeat bottom;
+  /* background: url("img/siracusa2.jpg") no-repeat bottom; */
   background-size: cover;
 
   z-index: 1;
 }
 .yellow {
-  color: yellow;
+  color: rgba(250, 214, 10, 0.950); /*rgba(245, 201, 6, 0.788);*/
 }
 .buttons {
   position: absolute;
@@ -780,6 +865,70 @@ footer a {
   background-color: rgba(252, 177, 39, 0.5);
   border: yellow solid 3px;
 }
+
+.contenido-nosotros {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  /* padding: 10%; */
+  flex-wrap: wrap;
+
+  background: url(img/yacanto-montaña-grande.jpeg) repeat;
+  background-size: cover;
+}
+.texto-nosotros {
+  float: left;
+  width: 40%;
+  height: 80vh;
+  min-height: 80vh;
+  padding: 5%;
+  display: flex;
+  text-align: justify;
+  align-self:center;
+  justify-content: center;
+  align-items: center;
+  /* background-image: linear-gradient( to top, rgb(180, 89, 3,.2), rgba(180, 89, 3, .75)); 0.85 - 0.5 */
+  z-index: 2;
+  font-size: 1.4rem;
+  /* text-shadow: 0 0 20px  rgba(0, 0, 0, 0.999); */
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.05);
+  /* margin-left: 50%; */
+}
+/* .centrado{
+  align-self: center;
+  display: flex;
+  justify-content: center;
+} */
+.texto-nosotros p{
+  align-self: center;
+}
+.imagen-nosotros {
+  z-index: 1;
+  /* position: absolute; */
+  /* right: 5%; */
+  /* top: 5%; */
+  width: 40%;
+  height: 80vh;
+  min-height: 80vh;
+  max-height: 80vh;
+  float: left;
+  overflow: hidden;
+  /* max-height: max-content; */
+}
+.imagen-nosotros img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .menuLateral {
   animation-duration: 1s;
   animation-name: menuLateral;
@@ -829,14 +978,39 @@ footer a {
   }
 }
 
+.contenido-proceso{
+  position: relative; width: 100%;height: 100%;display: flex; justify-content: space-around;text-align: center; vertical-align: middle; align-items: center; padding: 10%; 
+  flex-wrap: wrap;
+}
+.proceso{
+  width: 20%; height: 100%;
+  min-height: 100%; max-height: 100%;
+  align-self: center; border: #fff 2px solid; padding: 2%; 
+  background-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+  color: white;
+  z-index: 10000;
+
+} 
+.densidad img{
+  width: 50%;
+  height: auto;
+  padding-bottom: 1rem;
+}
+.video-cocina video {
+  width: 100%; height: auto;
+  padding-bottom: 1rem;
+}
+
+
 @media (max-width: 1400px) {
-   #presentacion, .seccion-derecha {
+   /* #presentacion, .seccion-derecha {
      width: 100%;
      min-width: 100vw;
      text-align: center;
      display: flex;
      justify-content: center;
-   }
+   } */
    /* .seccion-derecha{
      height: 50vh;
      max-height: 50vh;
@@ -895,12 +1069,20 @@ footer a {
     width: 100%;
     max-width: 100%;
   }
-  
+  .imagen-nosotros, .texto-nosotros{
+    width: 80%;
+  }
+  .texto-nosotros{
+    height:max-content;
+    min-height: max-content;
+  }
 }
+
 @media (max-width: 1000px){
   .buttons {
     width: 30%;
   }
+  
 }
 @media (max-width: 900px){
   .seccion-derecha-variedad {
@@ -909,15 +1091,12 @@ footer a {
     height: 90%;
     margin: 5%;
   }
-  #redes-contacto, #maps {
-    width: 100%;
-  }
-  #redes-contacto {
-    margin:  20% 0;
-  }
   
-  #section-empresa,
-  #section-historia,
+  /* #redes-contacto {
+    margin:  20% 0;
+  } */
+  
+  #section-nosotros,
   #section-proceso,
   #section-variedades,
   #section-contacto,
@@ -932,10 +1111,7 @@ footer a {
 }
 
 @media (max-width: 750px) {
-  #presentacion {
-    /*achicar*/
-    width: 100%;
-  }
+  
   #word1 {
     font-size: 3rem;
   }
@@ -963,6 +1139,9 @@ footer a {
   .variedad-izq {
     margin-top: 15%;
   }
+  #section-contacto {
+    padding-top: 40%;
+  }
 }
 
 @media (max-width: 550px){
@@ -981,9 +1160,9 @@ footer a {
   .textpPresentacion2 {
     font-size: 1.5rem;
   }
-  #redes-contacto {
+  /* #redes-contacto {
     margin-top:  40%;
-  }
+  } */
   .logo-container {
     margin-left: -11%;
   }
@@ -1022,6 +1201,9 @@ footer a {
   #section-variedades .section-empresa {
     display: none;
   }
+  #section-contacto {
+    padding-top: 50%;
+  }
 }
 
 @media (max-width: 460px){
@@ -1034,9 +1216,9 @@ footer a {
   #begin3 {
     margin-right: -10%;
   }
-  #redes-contacto {
+  /* #redes-contacto {
     margin-top:  50%;
-  }
+  } */
   .contact-text {
     font-size: 1.3rem;
    }
@@ -1044,11 +1226,9 @@ footer a {
      padding: 2rem;
      font-size: 1.4rem;
    }
-   #section-empresa,
-    #section-historia,
+   #section-nosotros,
     #section-proceso,
     #section-variedades,
-    #section-contacto,
     #section-apa,
     #section-ipa,
     #section-stout,
@@ -1074,6 +1254,9 @@ footer a {
   .textpPresentacion2 {
     font-size: 1.2rem;
   }
+  .logo-container {
+    margin-left: -14%;
+  }
   
   @supports (object-fit: cover) {
     #section-ipa .imagenes img {
@@ -1084,6 +1267,7 @@ footer a {
   }
 }
 
+
 @media (max-width: 360px){
   #begin2 {
     margin-left: -28%;
@@ -1091,20 +1275,25 @@ footer a {
   .contenidoCerveza {
     font-size: 1.3rem;
   }
-}
-
-@media (max-width: 360px){
   /* .buttons {
     width: 50%;
   } */
-  .interno {
-    display: flex;
-    flex-wrap: wrap;
+  .interno a {
+    display:flex;
+    flex-direction: column;
    }
    .contact-text {
     font-size: 1.2rem;
    }
+   .telefono {
+     display: block;
+     margin: 1rem 0 0 0;
+   }
+   .logo-container {
+    margin-left: -15%;
+  }
 }
+
 @media (max-width: 312px){
   /* .buttons {
     width: 55%;
