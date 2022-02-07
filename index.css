@@ -211,8 +211,8 @@ ul li {
 
 #presentacion, #presentacion2 {
   float: left;
-  background: url("img/gif/pexels-cottonbro2048x1080.gif") no-repeat;
-  /* background: url("img/gif/beer-10-lento.gif") no-repeat; */
+  /* background: url("img/gif/pexels-cottonbro2048x1080.gif") no-repeat; */
+  background: url("img/gif/fondo-beer.jpg") no-repeat;
   /* background: url("img/gif/cerveza-siracusa-presentacion.gif"); */
   /* background: url("img/gif/fondo-cerveza3.gif") repeat; */
   /* background: url("img/yacanto1.jpg") no-repeat; */
