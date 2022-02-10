@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="loader"></div>
     <div class="general-container">
         <header>
             <div class="central">
@@ -29,25 +30,35 @@
 					</nav>
                 </div>
             
-                <div id="redes">
+                <!-- <div id="redes">
                     <a href="https://www.instagram.com/cervezasiracusa/?hl=es-la" target="_blank" title="Ir al Instagram de Cerveza Siracusa">
                     <img src="img/logo-instagram.png" alt="">
-                    <!-- <i class="fab fa-instagram  instagram-icon"></i> -->
                     </a> 
-                </div>
+                </div> -->
             </div>
             
         </header>
         <main>
-            <div class="logo-container">
-                <!-- <div class="logo-cuadrado-borde-blanco">
+            <!-- <div class="logo-container">
+                <div class="logo-cuadrado-borde-blanco">
                     <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
-                </div> -->
-            </div>
-            <div class="wa">
+                </div>
+            </div> -->
+            <!-- <div class="wa">
                 <a title="Haz click aquí para enviar un mensaje por whats app" href="https://wa.me/5491161365210/?text=Hola!%20te%20consulto%20desde%20tu%20web" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div> -->
+            
+            <div class="redes">
+                <div class="instagram">
+                    <a href="https://www.instagram.com/cervezasiracusa/?hl=es-la" target="_blank" title="Ir al Instagram de Cerveza Siracusa">
+                        <img src="img/logo-instagram.png" alt="">
+                        <!-- <i class="fab fa-instagram  instagram-icon"></i> -->
+                        </a>
+                </div>
+                <div class="wa">
+                    <a title="Haz click aquí para enviar un mensaje por whats app" href="https://wa.me/5491161365210/?text=Hola!%20te%20consulto%20desde%20tu%20web" target="_blank" class="wa"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-
             <!-- <article id="section-inicio" class="top" style="background: url(img/camello-con-piramide2.png) no-repeat;
             background-size: cover;"> -->
             <!-- <article id="section-inicio" class="top" style="background: url(img/beer-atardecer.jpg) no-repeat;
@@ -140,32 +151,46 @@
                 </section> -->
 
                 <section id="presentacion2" class="" >  <!-- opcion1 - paisaje mas botellas 1er plano  --> 
-                    <div class="recuadros2" >
-                        <div id="logo-presentacion-2" >
-                            <img src="img/Logotipo Siracusa 2-transparente.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
-                        </div>
-                        
-                        <div id="begin" class=""  >
-                            <p id="word1" class="word1-2" style="color: rgba(225, 185, 82, 0.950);">CERVEZA</p> 
-                            <p id="word2" class=" word2-2" style="color: orange;">SIRACUSA</p>
-                        </div>
-                        <!-- <div><img src="img/botellas-sin-fondo.png" alt="" style="position: absolute;left: 50%;top: 60%;margin-left: -15%;"></div> -->
-                        <div id="begin2-2" class="" >
-                            <p id="" class="textpPresentacion dos sombra" style="color: rgba(2, 70, 2, 0.9);">IPA</p>
-                            <p id="" class="textpPresentacion dos" style="color: orange;">APA</p>
-                            <p id="" class="textpPresentacion dos sombra"style="color: rgba(0, 0, 0, 0.950);">STOUT</p>
-                            <p id="" class="textpPresentacion dos sombra" style="color: rgba(2, 75, 2, 0.9);">GOLDEN ALE</p>
-                            <p id="" class="textpPresentacion dos" style="color: rgba(240, 196, 86, 0.95);">SCOTTISH ALE</p>
-                        </div>
-            
+                    <div class="fondo-presentacion">
+                        <video autoplay muted loop poster="" preload="auto">
+                            <source src="img/gif/cerveza-2048x1080-7seg.mp4" type="video/mp4">
+                            Tu navegador no admite el elemento <code>video</code>.
+                          </video>
                     </div>
-                </section>
+                    <div class="contenido-presentacion">
+                        <div class="recuadros2"  >
+                            <div id="logo-presentacion-2">
+                                <img src="img/Logotipo Siracusa 2-transparente.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                            </div>
+                        </div>
+
+                        <div class="efecto">
+                            <div id="begin" class="">
+                                <p id="word1" class="word1-2" style="color: rgba(225, 185, 82, 0.950);">CERVEZA</p> 
+                                <p id="word2" class=" word2-2" style="color: orange;">De Montaña</p>
+                            </div>
+                            <div id="begin2-2" class="" >
+                                <p id="" class="textpPresentacion dos sombra" style="color: rgba(2, 70, 2, 0.9);">IPA</p>
+                                <p id="" class="textpPresentacion dos" style="color: rgb(6, 182, 73);">APA</p>
+                                <p id="" class="textpPresentacion dos sombra"style="color: rgba(0, 0, 0, 0.950);">STOUT</p>
+                                <p id="" class="textpPresentacion dos" style="color: rgba(240, 196, 86, 0.95);">GOLDEN ALE</p>
+                                <p id="" class="textpPresentacion dos" style="color: red;">SCOTTISH ALE</p>
+                            </div>
+                
+                        </div>    
+                    </div>
+               </section>
 
                
                 
             </article>
 
             <article id="section-nosotros">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="section-empresa" >
                     <div class="recuadros">
                         <div id="" class="begin" >
@@ -181,9 +206,15 @@
                     <div class="imagen-nosotros">
                         <!-- <img src="img/siracusa-paisaje1.jpg" alt=""> -->
                         <!-- <img src="img/yacanto-montaña-grande.jpeg" alt=""> -->
-                        <img src="img/botellas-con-deck.png" alt="" style="position: absolute; left: 0%;bottom: 0%;width: 100%;height: auto;">
+                        <picture>
+                            <source srcset="img/botellas-con-deck-movil.png" media="(max-width: 1200px)">
+                            <!-- <source srcset="img/img-movil/banner-900-500.gif" media="(max-width: 900px)">   
+                            <source srcset="img/img1280/banner-blanco.gif"  media="(max-width: 1280px)"> -->
+                            <img src="img/botellas-con-deck.png" alt="" >
+                        </picture>
+                       
                     </div>
-                    <div class="texto-nosotros" >
+                    <div class="texto-nosotros">
                         <p>Somos una familia de homebrewers apasionados por la cerveza artesanal. Buscamos lograr en cada cocción de pocos litros resultados que hagan que nuestra cerveza se siga eligiendo día a día, capacitándonos año tras año y aprendiendo de los mejores maestros y amigos cerveceros. <br>
                             Hoy nos sentimos plenos de poder compartir esta pasión y su resultado en nuestra cerveza puramente artesanal con ustedes, y poder brindar un poquito de lo que nos motiva cada día a continuar explorando este espectacular recorrido del HomeBrewer. <br>
                             Gracias por ser parte de esta experiencia junto a nosotros!</p>
@@ -195,6 +226,11 @@
 
 
             <article  id="section-variedades">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="section-empresa" >
                     <div class="recuadros">
                         <div id="" class="begin" >
@@ -221,6 +257,11 @@
             </article>
 
             <article  id="section-apa">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="fondo-oscuro"></section>
                 <section class="section-empresa" >
                     <div class="recuadros">
@@ -281,6 +322,11 @@
             </article> -->
  
             <article  id="section-ipa" class="white-section">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="fondo-oscuro"></section>
                 <section class="section-empresa" >
                     <div class="recuadros">
@@ -325,6 +371,11 @@
             </article>
 
             <article  id="section-scottish">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="fondo-oscuro"></section>
                 <section class="section-empresa" >
                     <div class="recuadros">
@@ -367,6 +418,11 @@
             </article>
 
             <article  id="section-stout">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="fondo-oscuro"></section>
                 <section class="section-empresa" >
                     <div class="recuadros">
@@ -409,6 +465,11 @@
             </article>
 
             <article  id="section-golden"  class="white-section">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="fondo-oscuro"></section>
                 <section class="section-empresa" >
                     <div class="recuadros">
@@ -441,6 +502,11 @@
             </article>
 
             <article  id="section-proceso">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="fondo-oscuro"></section>
                 <section class="section-empresa" >
                     <div class="recuadros">
@@ -461,7 +527,7 @@
                     </div>
 
                     <div class="proceso video-cocina">
-                        <video autoplay muted controls poster="" >
+                        <video autoplay muted controls poster="" preload="auto">
                             <source src="img/gif/hoy-se-cocina.mp4" type="video/mp4">
                             Tu navegador no admite el elemento <code>video</code>.
                           </video>
@@ -472,6 +538,11 @@
             </article>
 
             <article  id="section-contacto">
+                <div class="logo-container">
+                    <div class="logo-cuadrado-borde-blanco">
+                        <img src="img/logo-cuadrado-chico.png" alt="logo Cerveza Siracusa" title="Logo Cerveza Siracusa">
+                    </div>
+                </div>
                 <section class="fondo-oscuro"></section>
                 <section class="section-empresa" >
                     <div class="recuadros">
