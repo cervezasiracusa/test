@@ -47,6 +47,7 @@ $(document).ready(function(){
   let home = document.getElementById("presentacion2");
   let seccionContacto = document.getElementById("section-contacto");
   let instagram = document.getElementsByClassName("instagram");
+  let textos = document.getElementsByClassName("textpPresentacion-movil");
   
   // console.log(whiteSection1+" * "+whiteSection2);
 
@@ -100,8 +101,10 @@ $(document).ready(function(){
 // screenWidthControl(); 
     presentacion();
     presentacion2();
+    presentacion3();
     setInterval(presentacion, 10000);
     setInterval(presentacion2, 10000);
+    setInterval(presentacion3, 5000);
 
     window.addEventListener('scroll', function()  { resizeLogo(); });
     window.addEventListener('scroll', function()  { verificarInstagram(); });
@@ -230,7 +233,7 @@ $(document).ready(function(){
     });
 
     function verificarInstagram() {
-      console.log(seccionContacto.getBoundingClientRect().top);
+      // console.log(seccionContacto.getBoundingClientRect().top);
       // if (($(window).scrollTop() >= seccionContacto.getBoundingClientRect().top) ) { 
         if (seccionContacto.getBoundingClientRect().top <= document.documentElement.clientHeight ) { 
           instagram[0].style.opacity= "0";
@@ -239,7 +242,16 @@ $(document).ready(function(){
         }
     }
 
+    function presentacion3() {
+       for (let index = 0; index < textos.length; index++) {
+        // $("#begin2-2-movil .textpPresentacion-movil").css("display" , "none");
+        setTimeout(function(){
+          $("#begin2-2-movil .textpPresentacion-movil").css("display" , "none");
+          textos[index].style.display = 'block'; }, 1000+(index*1000));
+       }
+    }
 
+    
    function goToSection(object){
     header[0].style.zIndex = "1000";
       

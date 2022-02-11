@@ -98,6 +98,25 @@ ul li {
   opacity: 0.3;
   /* object-fit: fill; */
 }
+#logo-presentacion-2-movil {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5%;
+  z-index: -1;
+}
+#logo-presentacion-2-movil img {
+  width: 30%;
+  height: auto;
+  opacity: 0.3;
+}
 /* .logo {
   position: relative;
   border: white 12px solid;
@@ -313,12 +332,15 @@ ul li {
   /* border: red solid 3px; */
   z-index: 100;
 }
-.contenido-presentacion {
+.contenido-presentacion, .contenido-presentacion-movil {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; height: 100%;
   z-index: 1;
+}
+.contenido-presentacion-movil{
+  display: none;
 }
 .recuadros2 {
   position: relative;
@@ -336,6 +358,18 @@ ul li {
   z-index: 100;
   padding-right: 5%;
   padding-left: 10%;
+}
+.recuadros2-movil {
+  position: relative;
+  float: left;
+  width: 100%; height: 100%;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: space-between;
+  z-index: 100;
+  /* padding-right: 5%;
+  padding-left: 10%; */
 }
 .efecto {
   position: absolute;
@@ -363,6 +397,18 @@ ul li {
   opacity: 0;
   left: 0%;
 }
+.textpPresentacion-movil {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  transition: all 1s;
+}
+/* .hidden {
+  display: none;
+} */
+/* .visible {
+  display: block;
+} */
 .textpPresentacion3 {
   font-size: 2rem;
   font-weight: 600;
@@ -386,7 +432,7 @@ ul li {
   font-weight:900;
   line-height: 5rem;
   
-  text-shadow: 0 0 2px  rgba(255, 255, 255, 1);
+  text-shadow: 0 0 8px  rgba(255, 255, 255, 1);
 }
 #begin {
   float: left;
@@ -423,9 +469,16 @@ ul li {
   align-self: center;
   width: max-content;
   margin-left: 10%;
-  /* right: 100%; */
-  /* margin-left: 5%; */
-  /* border: blue 3px solid; */
+}
+#begin2-2-movil {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  /* text-align: left; */
+  line-height: 4rem;
+  align-self: center;
+  width: max-content;
+  /* margin-left: 10%; */
 }
 #begin3 {
   float: left;
@@ -607,12 +660,13 @@ ul li {
   align-self: center;
   /* z-index: 10000; */
   /* border: orange 5px solid; */
+  box-shadow: 5px 5px  10px rgba(0, 0, 0, 0.2);
 }
 .imagenes img {
     width: 100%;
     height: auto;
     min-height: 80vh;
-    border: orange 5px solid;
+    /* border: orange 5px solid; */
     /* object-fit: fill; */
     /* min-height: 100%; */
     /* z-index: 10000; */
@@ -1161,30 +1215,29 @@ footer a {
     position: absolute;
     top: 0;
     left: 0;
-    /* align-content:flex-start; */
-    /* align-self: flex-start; */
     height: 50%;
   }
   #presentacion2 {
     height: max-content;
-    /* justify-content:flex-start; */
-    /* align-items: flex-start; */
   }
-  .fondo-presentacion {
+  /* .fondo-presentacion {
     height: 200vh;
-  }
+  } */
   .efecto {
     top: 50%;
     height: 50%;
   }
-  /* #begin {
-    margin-left: -18%;
-  } */
   #begin2-2 {
     margin-left: 0;
   }
   .imagen-nosotros, .texto-nosotros{
     width: 50%;
+  }
+  .contenido-presentacion{
+    display: none;
+  }
+  .contenido-presentacion-movil{
+    display: block;
   }
 }
 @media (max-width: 1200px){
@@ -1239,17 +1292,21 @@ footer a {
     height:max-content;
     min-height: max-content;
   }
-  #logo-presentacion-2 img {
+  #logo-presentacion-2 img { /*}, #logo-presentacion-2-movil img {*/
     width: 50%;
   }
-  /* .contenido-presentacion {
-    top: 50vh;
-  } */
+  #logo-presentacion-2-movil {
+    padding-top: 10%;
+  }
+  
 }
 
 @media (max-width: 1000px){
   .buttons {
     width: 30%;
+  }
+  #section-variedades .logo-container, #section-apa .logo-container, #section-ipa .logo-container,#section-stout .logo-container, #section-scottish .logo-container, #section-variedades .section-empresa, #section-apa .section-empresa, #section-ipa .section-empresa,#section-stout .section-empresa, #section-scottish .section-empresa {
+    display: none;
   }
   
 }
@@ -1310,6 +1367,9 @@ footer a {
   #logo-presentacion-2 img {
     width: 70%;
   }
+  #logo-presentacion-2-movil img {
+    width: 50%;
+  }
   h3 {
     font-size: 2.3rem;
     padding-bottom: 1rem;
@@ -1333,6 +1393,7 @@ footer a {
   .imagen-nosotros, .texto-nosotros{
     width: 80%;
   }
+  
  
 }
 
@@ -1380,6 +1441,9 @@ footer a {
   }
   #logo-presentacion-2 img {
     width: 85%;
+  }
+  #logo-presentacion-2-movil img {
+    width: 70%;
   }
   .contenidoCerveza {
     padding: 1.5rem;
@@ -1444,7 +1508,7 @@ footer a {
   .section-empresa {
     padding-left: 0;
   }
-  #logo-presentacion-2 img {
+  #logo-presentacion-2 img, #logo-presentacion-2-movil img {
     width: 90%;
   }
   .imagen-nosotros, .texto-nosotros{
@@ -1453,6 +1517,7 @@ footer a {
   .contenidoCerveza {
     font-size: 1rem;
   }
+  
  }
 
 @media (max-width: 400px){
@@ -1466,7 +1531,7 @@ footer a {
     font-size: 1.2rem;
   }
   .logo-container {
-    margin-left: -14%;
+    margin-left: -15%;
   }
   .textpPresentacion {
     font-size: 1.5rem;
@@ -1481,6 +1546,9 @@ footer a {
   }
   h3 {
     font-size: 2.2rem;
+  }
+  .textpPresentacion-movil {
+    font-size: 1.9rem;
   }
 }
 
@@ -1504,7 +1572,7 @@ footer a {
      margin: 1rem 0 0 0;
    }
    .logo-container {
-    margin-left: -15%;
+    margin-left: -18%;
   }
   /* #section-nosotros .section-empresa {
     margin-top: 35%;
