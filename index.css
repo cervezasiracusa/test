@@ -133,7 +133,7 @@ ul li {
   position: relative;
   border: 10px solid white;
   position: relative;
-  width: 70%;
+  width: 55%;
   min-width: 131px;
   height: 70%;
   min-height: 131px;
@@ -243,6 +243,11 @@ ul li {
 }
 #section-contacto .fondo-oscuro {  /* oscurece el background de la seccion contacto*/
   background: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  z-index: 3;
+}
+#section-proceso .fondo-oscuro {  /* oscurece el background de la seccion contacto*/
+  background: rgba(0, 0, 0, 0.4);
   opacity: 1;
   z-index: 3;
 }
@@ -686,6 +691,27 @@ h3 {
   /* letter-spacing: -0.1rem; */
   font-family: Bebas Neue;
 }
+h4 {
+  font-size: 2rem;
+  color: rgb(1, 49, 1);
+  padding-bottom: 1rem;
+  font-family: Bebas Neue;
+  text-shadow: none;
+  z-index: 11;
+}
+h5 {
+  margin-right: 1rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: rgb(1, 49, 1);
+  /* padding-bottom: 1rem; */
+  font-family: Bebas Neue;
+  text-shadow: none;
+  z-index: 11;
+}
+.textbold {
+  font-weight: bold;
+}
 .contenidoCerveza {
     width: 100%;
     height: 80vh;
@@ -1047,9 +1073,9 @@ footer a {
 }
 .texto-nosotros {
   float: left;
-  width: 40%;
-  height: 80vh;
-  min-height: 80vh;
+  width: 50%;
+  height: 75vh;
+  min-height: 75vh;
   max-height: max-content;
   padding: 5%;
   display: flex;
@@ -1145,7 +1171,7 @@ footer a {
 }
 
 .contenido-proceso{
-  position: relative; width: 100%;height: 100%;display: flex; justify-content: space-around;text-align: center; vertical-align: middle; align-items: center; padding: 10%; 
+  position: relative; width: 100%;height: 100%;display: flex; justify-content: space-around;text-align: center; vertical-align: middle; align-items: center; padding: 6%; 
   flex-wrap: wrap;
 }
 .proceso{
@@ -1159,6 +1185,37 @@ footer a {
   z-index: 10000;
 
 } 
+.recomendaciones{
+  width: 49%; height: 100%;
+  /* min-width: 300px; */
+  min-height: 100%; max-height: 100%;
+  align-self: center; border: #fff 2px solid; padding: 2%; 
+  background-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+  text-align: left;
+  color: white;
+  z-index: 10;
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+
+} 
+.recomendaciones p{
+  font-size: 1.3rem;
+}
+.contenido-proceso h3 {
+  color: white;
+  z-index: 10;
+}
+.recomendaciones-contenedor {
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 2%;
+}
 .densidad img{
   width: 50%;
   height: auto;
@@ -1305,7 +1362,14 @@ footer a {
   .buttons {
     width: 30%;
   }
-  #section-variedades .logo-container, #section-apa .logo-container, #section-ipa .logo-container,#section-stout .logo-container, #section-scottish .logo-container, #section-variedades .section-empresa, #section-apa .section-empresa, #section-ipa .section-empresa,#section-stout .section-empresa, #section-scottish .section-empresa {
+  #section-variedades .logo-container, #section-apa .logo-container, #section-ipa .logo-container,#section-stout .logo-container, #section-scottish .logo-container, #section-golden .logo-container, #section-variedades .section-empresa, #section-apa .section-empresa, #section-ipa .section-empresa,#section-stout .section-empresa, #section-scottish .section-empresa, #section-golden .section-empresa {
+    display: none;
+  }
+  .recomendaciones{
+    width: 90%; 
+    margin-bottom: 2rem;
+  }
+  #section-proceso .recuadros {
     display: none;
   }
   
@@ -1322,14 +1386,16 @@ footer a {
     margin:  20% 0;
   } */
   
-  #section-nosotros .section-empresa, .contenido-proceso {
+  #section-nosotros .section-empresa {
     margin-top: 20%;
+  }
+  #section-proceso {
+    padding-top: 5%;
   }
   .contenido-nosotros{
     padding-top: 50%;
   }
-  #section-proceso,
-  #section-variedades,
+   #section-variedades,
   #section-contacto,
   #section-apa,
   #section-ipa,
@@ -1378,6 +1444,13 @@ footer a {
     padding: 2rem;
     font-size: 1.4rem;
   }
+  .recomendaciones {
+    padding: 1rem;
+  }
+  h4 {
+    align-self: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px){
@@ -1394,7 +1467,14 @@ footer a {
     width: 80%;
   }
   
- 
+  .recomendaciones{
+    width: 90%; 
+    margin-left: 1rem;
+  }
+  h5 {
+    align-self: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 550px){
@@ -1468,6 +1548,9 @@ footer a {
   #section-contacto {
     padding-top: 50%;
   }
+  .recomendaciones-contenedor {
+    width: 88%;
+  }
 }
 
 @media (max-width: 460px){
@@ -1486,14 +1569,16 @@ footer a {
   .contact-text {
     font-size: 1.3rem;
    }
-   #section-nosotros .section-empresa,.contenido-proceso {
+   #section-nosotros .section-empresa {
     margin-top: 35%;
   }
+  /* .contenido-proceso {
+    padding: 12%;
+  } */
   .contenido-nosotros{
     padding-top: 60%;
   }
-
-    #section-proceso,
+     
     #section-variedades,
     #section-apa,
     #section-ipa,
@@ -1550,6 +1635,12 @@ footer a {
   .textpPresentacion-movil {
     font-size: 1.9rem;
   }
+  .recomendaciones-contenedor { 
+    width: 80%;
+  }
+  /* .contenido-proceso {
+    padding: 12% 14%;
+  } */
 }
 
 
